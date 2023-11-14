@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "gregtinker",
+    "name": "GregTinker",
+    "description": "This is the TiC module of EPcore, providing TiC support for GT's materials.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["qwer5233"],
+    "credits": "qwer5233",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
