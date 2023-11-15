@@ -50,12 +50,12 @@ public class TraitGravitation extends AbstractTrait
                 }
 
                 NBTTagCompound itemTag = itemEntity.getEntityData();
-                if (itemTag != null && itemTag.hasKey("PreventRemoteMovement"))
+                if (itemTag.hasKey("PreventRemoteMovement"))
                 {
                     continue;
                 }
 
-                if (itemEntity.getThrower() != null && itemEntity.getThrower().equals(entity.getName()) && itemEntity.pickupDelay > 0)
+                if (itemEntity.getThrower().equals(entity.getName()) && itemEntity.pickupDelay > 0)
                 {
                     continue;
                 }

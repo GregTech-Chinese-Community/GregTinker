@@ -7,4 +7,6 @@ public class TraitChopping extends AbstractTrait
     public TraitChopping() {
         super("chopping", 128128128);
     }
+
+
 }

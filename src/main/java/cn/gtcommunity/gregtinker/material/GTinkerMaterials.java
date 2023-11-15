@@ -53,7 +53,7 @@ public class GTinkerMaterials
                 .withStatsHandle(1.2F, 300)
                 .withStatsExtra(100)
                 .withTraits(PartType.MAIN, GTinkerTraits.CHOPPING)
-                .withTraits(PartType.TOOL, GTinkerTraits.UNBREAKABLE)
+                .withTraits(PartType.TOOL, TinkerTraits.sharp)
                 .build();
         STERLING_SILVER = new MaterialBuilder("sterling_silver", 0xFFF5EE, MaterialForm.METAL, "SterlingSilver")
                 .requiresOres("ingotSterlingSilver")
@@ -89,7 +89,7 @@ public class GTinkerMaterials
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
                 .withTraits(PartType.MAIN, GTinkerTraits.ALPHA)
-                .withTraits(PartType.TOOL, GTinkerTraits.VENEER)
+                .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         HSSE = new MaterialBuilder("hsse", 0x4F7942, MaterialForm.METAL, "Hsse")
                 .requiresOres("ingotHsse")
@@ -98,7 +98,7 @@ public class GTinkerMaterials
                 .withStatsHandle(1.2F, 300)
                 .withStatsExtra(100)
                 .withTraits(PartType.MAIN, GTinkerTraits.BETA)
-                .withTraits(PartType.TOOL, GTinkerTraits.VENEER)
+                .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         HSSS = new MaterialBuilder("hsss", 0x8B0000, MaterialForm.METAL, "Hsss")
                 .requiresOres("ingotHsss")
@@ -107,7 +107,7 @@ public class GTinkerMaterials
                 .withStatsHandle(1.2F, 300)
                 .withStatsExtra(100)
                 .withTraits(PartType.MAIN, GTinkerTraits.OMEGA)
-                .withTraits(PartType.TOOL, GTinkerTraits.VENEER)
+                .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         NAQUADAH = new MaterialBuilder("naquadah", 0x28282B, MaterialForm.METAL, "Naquadah")
                 .requiresOres("ingotNaquadah")

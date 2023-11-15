@@ -17,28 +17,43 @@ public class TraitOmega extends AbstractTrait
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    @Override
-    public void onHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, boolean isCritical) {
-        attackEntitySecondary(DamageSource.MAGIC, damage, player, true, false);
-        super.onHit(tool, player, target, damage, isCritical);
-    }
-
     @SubscribeEvent
     public void onPlayerDamaged(LivingHurtEvent event)
     {
         if (!(event.getEntityLiving() instanceof EntityPlayer player)) return;
 
-        if (!event.getSource().damageType.equals("mob")) return;
+        if (!(event.getSource().getTrueSource() instanceof EntityLivingBase)) return;
 
+        if (isToolHeld(player))
+        {
+            event.setAmount(0);
+        }
+    }
+
+    @SubscribeEvent
+    public void onEntityDamaged(LivingHurtEvent event)
+    {
+        if (event.getEntityLiving() instanceof EntityPlayer) return;
+
+        if (!(event.getSource().getTrueSource() instanceof EntityPlayer player)) return;
+
+        if (isToolHeld(player))
+        {
+            attackEntitySecondary(DamageSource.MAGIC, event.getAmount(), player, true, false);
+        }
+    }
+
+    public boolean isToolHeld(EntityPlayer player)
+    {
         ItemStack[] inventory = new ItemStack[] {player.getHeldItemMainhand(), player.getHeldItemOffhand()};
 
         for (ItemStack item : inventory)
         {
             if (isToolWithTrait(item))
             {
-                event.setAmount(0);
-                return;
+                return true;
             }
         }
+        return false;
     }
 }
