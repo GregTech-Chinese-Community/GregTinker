@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 )
 public class GregTinker
 {
-    public static final String MODID = "assets/gregtinker";
+    public static final String MODID = "gregtinker";
     public static final String NAME = "GregTinker";
     public static final String VERSION = "0.0.1";
     public static final String DEPENDENCIES = "required-after:gcym; required-after:tconstruct";

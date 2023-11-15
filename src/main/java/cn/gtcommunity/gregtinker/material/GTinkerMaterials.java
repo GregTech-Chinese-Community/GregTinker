@@ -3,6 +3,7 @@ package cn.gtcommunity.gregtinker.material;
 import cn.gtcommunity.gregtinker.trait.GTinkerTraits;
 import cn.gtcommunity.gregtinker.trait.TraitGravitation;
 import com.google.common.eventbus.Subscribe;
+import gregtech.api.unification.material.Materials;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import slimeknights.mantle.pulsar.pulse.Pulse;
@@ -29,8 +30,9 @@ public class GTinkerMaterials
     public static void init()
     {
         WROUGHT_IRON = new MaterialBuilder("wrought_iron", 0xC4A484, MaterialForm.METAL, "WroughtIron")
+                .requiresMods("gregtech")
                 .requiresOres("ingotWroughtIron")
-                .setCastable(380)
+                .setCastable(() -> Materials.WroughtIron.getFluid(), 380)
                 .withStatsHead(350, 6.5F, 5F, HarvestLevels.DIAMOND)
                 .withStatsHandle(0.9F, 125)
                 .withStatsExtra(50)
@@ -38,8 +40,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, TinkerTraits.magnetic)
                 .build();
         STAINLESS_STEEL = new MaterialBuilder("stainless_steel", 0xE5E4E2, MaterialForm.METAL, "StainlessSteel")
+                .requiresMods("gregtech")
                 .requiresOres("ingotStainlessSteel")
-                .setCastable(1400)
+                .setCastable(() -> Materials.StainlessSteel.getFluid(), 1400)
                 .withStatsHead(1000, 7F, 8F, HarvestLevels.OBSIDIAN)
                 .withStatsHandle(1.2F, 300)
                 .withStatsExtra(100)
@@ -47,8 +50,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, TinkerTraits.magnetic2)
                 .build();
         DAMASCUS_STEEL = new MaterialBuilder("damascus_steel", 0x575757, MaterialForm.METAL, "DamascusSteel")
+                .requiresMods("gregtech")
                 .requiresOres("ingotDamascusSteel")
-                .setCastable(1200)
+                .setCastable(() -> Materials.DamascusSteel.getFluid(), 1200)
                 .withStatsHead(1000, 8F, 10F, HarvestLevels.OBSIDIAN)
                 .withStatsHandle(1.2F, 300)
                 .withStatsExtra(100)
@@ -56,8 +60,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, TinkerTraits.sharp)
                 .build();
         STERLING_SILVER = new MaterialBuilder("sterling_silver", 0xFFF5EE, MaterialForm.METAL, "SterlingSilver")
+                .requiresMods("gregtech")
                 .requiresOres("ingotSterlingSilver")
-                .setCastable(1400)
+                .setCastable(() -> Materials.SterlingSilver.getFluid(), 1400)
                 .withStatsHead(500, 5F, 5F, HarvestLevels.IRON)
                 .withStatsHandle(0.95F, 100)
                 .withStatsExtra(200)
@@ -65,8 +70,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.AUX, TinkerTraits.holy)
                 .build();
         ROSE_GOLD = new MaterialBuilder("rose_gold", 0xFFC000, MaterialForm.METAL, "RoseGold")
+                .requiresMods("gregtech")
                 .requiresOres("ingotRoseGold")
-                .setCastable(1300)
+                .setCastable(() -> Materials.RoseGold.getFluid(), 1300)
                 .withStatsHead(50, 12F, 3F, HarvestLevels.IRON)
                 .withStatsHandle(1.1F, -25)
                 .withStatsExtra(250)
@@ -74,8 +80,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.DEFAULT, GTinkerTraits.VENEER)
                 .build();
         RED_ALLOY = new MaterialBuilder("red_alloy", 0xD22B2B, MaterialForm.METAL, "RedAlloy")
+                .requiresMods("gregtech")
                 .requiresOres("ingotRedAlloy")
-                .setCastable(480)
+                .setCastable(() -> Materials.RedAlloy.getFluid(), 480)
                 .withStatsHead(50, 12F, 3F, HarvestLevels.IRON)
                 .withStatsHandle(1.1F, -25)
                 .withStatsExtra(250)
@@ -83,8 +90,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, GTinkerTraits.VENEER)
                 .build();
         HSSG = new MaterialBuilder("hssg", 0xC4B454, MaterialForm.METAL, "Hssg")
+                .requiresMods("gregtech")
                 .requiresOres("ingotHssg")
-                .setCastable(3900)
+                .setCastable(() -> Materials.HSSG.getFluid(), 3900)
                 .withStatsHead(1500, 7F, 8F, HarvestLevels.COBALT)
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
@@ -92,8 +100,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         HSSE = new MaterialBuilder("hsse", 0x4F7942, MaterialForm.METAL, "Hsse")
+                .requiresMods("gregtech")
                 .requiresOres("ingotHsse")
-                .setCastable(4700)
+                .setCastable(() -> Materials.HSSE.getFluid(), 4700)
                 .withStatsHead(1500, 7F, 8F, 5)
                 .withStatsHandle(1.2F, 300)
                 .withStatsExtra(100)
@@ -101,8 +110,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         HSSS = new MaterialBuilder("hsss", 0x8B0000, MaterialForm.METAL, "Hsss")
+                .requiresMods("gregtech")
                 .requiresOres("ingotHsss")
-                .setCastable(4700)
+                .setCastable(() -> Materials.HSSS.getFluid(), 4700)
                 .withStatsHead(1750, 7F, 8F, 5)
                 .withStatsHandle(1.2F, 300)
                 .withStatsExtra(100)
@@ -110,8 +120,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         NAQUADAH = new MaterialBuilder("naquadah", 0x28282B, MaterialForm.METAL, "Naquadah")
+                .requiresMods("gregtech")
                 .requiresOres("ingotNaquadah")
-                .setCastable(4700)
+                .setCastable(() -> Materials.Naquadah.getFluid(), 4700)
                 .withStatsHead(3000, 10F, 15F, 6)
                 .withStatsHandle(6F, 1500)
                 .withStatsExtra(500)
@@ -119,8 +130,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, GTinkerTraits.SUPERTIGHT)
                 .build();
         NAQUADAH_ENRICHED = new MaterialBuilder("naquadah_enriched", 0x28282B, MaterialForm.METAL, "NaquadahEnriched")
+                .requiresMods("gregtech")
                 .requiresOres("ingotNaquadahEnriched")
-                .setCastable(5700)
+                .setCastable(() -> Materials.NaquadahEnriched.getFluid(), 5700)
                 .withStatsHead(3500, 12F, 20F, 7)
                 .withStatsHandle(8F, 1750)
                 .withStatsExtra(750)
@@ -128,8 +140,9 @@ public class GTinkerMaterials
                 .withTraits(PartType.TOOL, GTinkerTraits.SUPERTIGHT)
                 .build();
         NEUTRONIUM = new MaterialBuilder("neutronium", 0xC0C0C0, MaterialForm.METAL, "Neutronium")
+                .requiresMods("gregtech")
                 .requiresOres("ingotNeutronium")
-                .setCastable(9999)
+                .setCastable(() -> Materials.Neutronium.getFluid(), 9999)
                 .withStatsHead(9000, 15F, 105F, 10)
                 .withStatsHandle(10F, 4500)
                 .withStatsExtra(1000)
