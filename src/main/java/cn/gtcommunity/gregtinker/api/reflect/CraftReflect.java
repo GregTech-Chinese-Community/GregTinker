@@ -23,24 +23,32 @@ public class CraftReflect
     private static final List<NonNullList<ItemStack>> idToStackUn
             = MirrorUtils.<List<NonNullList<ItemStack>>>reflectField(OreDictionary.class, "idToStackUn").get(null);
 
-    static {
+    static
+    {
         fPlayerCapabilities_flySpeed = ObfuscationReflectionHelper.findField(PlayerCapabilities.class, "field_75096_f");
         fPlayerCapabilities_flySpeed.setAccessible(true);
     }
 
-    public static void setFlySpeed(PlayerCapabilities playerCaps, float speed) {
-        try {
+    public static void setFlySpeed(PlayerCapabilities playerCaps, float speed)
+    {
+        try
+        {
             fPlayerCapabilities_flySpeed.setFloat(playerCaps, speed);
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             throw new IllegalStateException("Failed to write field: " + fPlayerCapabilities_flySpeed);
         }
     }
 
-    public static void setFluidUniqueId(Fluid fluid, String fluidId) {
+    public static void setFluidUniqueId(Fluid fluid, String fluidId)
+    {
         String oldId = masterFluidReference.inverse().remove(fluid);
-        if (oldId != null) {
+        if (oldId != null)
+        {
             masterFluidReference.put(fluidId, fluid);
-            if (oldId.equals(defaultFluidName.get(fluid.getName()))) {
+            if (oldId.equals(defaultFluidName.get(fluid.getName())))
+            {
                 defaultFluidName.put(fluid.getName(), fluidId);
             }
         }

@@ -24,7 +24,8 @@ public class MirrorUtils
             {
                 fField_modifiers = Field.class.getDeclaredField("modifiers");
                 fField_modifiers.setAccessible(true);
-            } catch (Exception var4)
+            }
+            catch (Exception var4)
             {
                 throw new IllegalStateException("Failed to reflect field modifiers!", var4);
             }
@@ -33,7 +34,8 @@ public class MirrorUtils
         try
         {
             fField_modifiers.setInt(field, modifiers);
-        } catch (Exception var3)
+        }
+        catch (Exception var3)
         {
             throw new IllegalStateException("Failed to write field modifieres!", var3);
         }
@@ -58,7 +60,8 @@ public class MirrorUtils
             Method method = clazz.getDeclaredMethod(name, args);
             method.setAccessible(true);
             return new IMethod.Impl(method);
-        } catch (NoSuchMethodException var4)
+        }
+        catch (NoSuchMethodException var4)
         {
             throw new MirrorException(String.format("Could not reflect method: %s/%s %s", clazz.getName(), name, Arrays.toString(args)), var4);
         }
@@ -71,7 +74,8 @@ public class MirrorUtils
             Field field = clazz.getDeclaredField(name);
             field.setAccessible(true);
             return new IField.Impl(field);
-        } catch (NoSuchFieldException var3)
+        }
+        catch (NoSuchFieldException var3)
         {
             throw new MirrorException(String.format("Could not reflect field: %s/%s", clazz.getName(), name), var3);
         }
@@ -98,7 +102,8 @@ public class MirrorUtils
                 }
 
                 field.set(target, value);
-            } catch (IllegalAccessException var5)
+            }
+            catch (IllegalAccessException var5)
             {
                 throw new MirrorException("Could not mutate field: " + this.unwrap(), var5);
             }
@@ -109,7 +114,8 @@ public class MirrorUtils
             try
             {
                 return (T) this.unwrap().get(target);
-            } catch (IllegalAccessException var3)
+            }
+            catch (IllegalAccessException var3)
             {
                 throw new MirrorException("Could not read field: " + this.unwrap(), var3);
             }
@@ -140,7 +146,8 @@ public class MirrorUtils
             try
             {
                 return (T) this.unwrap().invoke(target, args);
-            } catch (InvocationTargetException | IllegalAccessException var4)
+            }
+            catch (InvocationTargetException | IllegalAccessException var4)
             {
                 throw new MirrorException("Could not invoke method: " + this.unwrap(), var4);
             }

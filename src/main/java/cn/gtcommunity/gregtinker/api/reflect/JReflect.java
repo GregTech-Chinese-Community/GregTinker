@@ -11,8 +11,10 @@ public class JReflect
     private static final Field fLinkedHashMap$Entry_after;
     private static final Field fHashMap$Node_key;
 
-    static {
-        try {
+    static
+    {
+        try
+        {
             fLinkedHashMap_head = LinkedHashMap.class.getDeclaredField("head");
             fLinkedHashMap_head.setAccessible(true);
             fLinkedHashMap_tail = LinkedHashMap.class.getDeclaredField("tail");
@@ -25,13 +27,17 @@ public class JReflect
             Class<?> tHashMap$Entry = Class.forName("java.util.HashMap$Node");
             fHashMap$Node_key = tHashMap$Entry.getDeclaredField("key");
             fHashMap$Node_key.setAccessible(true);
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             throw new IllegalStateException("Failed to initialize Java reflection hacks!", e);
         }
     }
 
-    public static <K, V> void moveLinkedHashMapEntryToFront(LinkedHashMap<K, V> materials, K expectedKey) {
-        try {
+    public static <K, V> void moveLinkedHashMapEntryToFront(LinkedHashMap<K, V> materials, K expectedKey)
+    {
+        try
+        {
             Object entry = fLinkedHashMap_tail.get(materials);
             if (entry == null || !expectedKey.equals(fHashMap$Node_key.get(entry))) {
                 return;
@@ -50,7 +56,9 @@ public class JReflect
             fLinkedHashMap_head.set(materials, entry);
             fLinkedHashMap$Entry_before.set(entry, null);
             fLinkedHashMap$Entry_after.set(entry, oldHead);
-        } catch (ReflectiveOperationException e) {
+        }
+        catch (ReflectiveOperationException e)
+        {
             throw new IllegalStateException("Failed to perform linked hash map hack!", e);
         }
     }

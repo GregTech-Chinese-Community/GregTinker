@@ -14,7 +14,8 @@ public interface LazyAccum<T>
         accumulate(new Accrue<>(list));
     }
 
-    default List<T> collect() {
+    default List<T> collect()
+    {
         List<T> list = new ArrayList<>();
         collectTo(list);
         return list;
