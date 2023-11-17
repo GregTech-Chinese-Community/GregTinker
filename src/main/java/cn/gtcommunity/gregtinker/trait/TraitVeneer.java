@@ -8,7 +8,7 @@ public class TraitVeneer extends AbstractTraitLeveled
 {
     public TraitVeneer(int levels)
     {
-        super("veneer", String.valueOf(levels), 255215000, 2, 1);
+        super("veneer", String.valueOf(levels), 0xFFC000, 2, 1);
     }
 
     @Override

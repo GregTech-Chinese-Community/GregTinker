@@ -13,7 +13,7 @@ public class TraitOmega extends AbstractTrait
 {
     public TraitOmega()
     {
-        super("omega", 165420420);
+        super("omega", 0xFFFFF0);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

@@ -48,7 +48,7 @@ material.maraging_steel_300.name=马氏体时效钢300
 material.hsla_steel.name=HSLA钢
 
 modifier.gravitation.name=万象天引
-modifier.gravitation.desc=§o引力操纵！§r\n自动吸引物品，右键弹开周围的生物。
+modifier.gravitation.desc=§o引力操纵！§r\n自动吸引物品，右键弹开周围的生物，潜行右键吸引周围的生物。
 
 modifier.unbreakable.name=亘古永恒
 modifier.unbreakable.desc=§o为何有物存在，而非一物不存？§r\n工具不会消耗耐久。
@@ -73,6 +73,30 @@ modifier.chopping.desc=§o吹毛断发！§r\n敌人的护甲对你形同虚设�
 
 modifier.corrosion_resistance.name=抗腐蚀
 modifier.corrosion_resistance.desc=§o光亮如新！§r\n你的工具在挖掘比自己挖掘等级低的方块或一击使目标毙命时不会消耗耐久。
+
+modifier.blood_sucking.name=吸血
+modifier.blood_sucking.desc=§o猩红宴饮。§r\n基于你的攻击伤害恢复生命。
+
+modifier.counter_measures.name=反制
+modifier.counter_measures.desc=§o不吃这套！§r\n敌人的攻击有几率被格挡，并使其被击退。
+
+modifier.counterattack.name=反击
+modifier.counterattack.desc=§o以牙还牙，以眼还眼！§r\n来自敌人的攻击有一定几率会使得你自动地反击。
+
+modifier.evenly_matched.name=势均力敌
+modifier.evenly_matched.desc=§o均衡之力。§r\n基于敌人和你的血量差距提升或减少攻击伤害。
+
+modifier.mage_hand.name=法师之手
+modifier.mage_hand.desc=§o无形的手。§r\n你的敌人会被无形之手抓起。
+
+modifier.induced_lightning.name=召雷
+modifier.induced_lightning.desc=§o雷公助我。§r\n你的敌人有机率会被闪电劈中。
+
+modifier.malicious_perception.name=恶意感知
+modifier.malicious_perception.desc=§o蜘蛛感应。§r\n对你有恶意的生物会被高亮显示。
+
+modifier.rapacity.name=贪得无厌
+modifier.rapacity.desc=§o杀戮！§r\n重复攻击同种生物会让你的武器越来越锋利。
 
 modifier.supertight.name=超致密
 modifier.supertight.desc=§o难以想象的厚重！§r\n在使用工具时有概率不消耗耐久，在耐久低于1/3时大概率不消耗耐久。

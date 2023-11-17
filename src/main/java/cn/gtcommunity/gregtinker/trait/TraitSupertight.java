@@ -9,7 +9,7 @@ public class TraitSupertight extends AbstractTrait
 {
     public TraitSupertight()
     {
-        super("supertight", 520520520);
+        super("supertight", 0x702963);
     }
 
     @Override

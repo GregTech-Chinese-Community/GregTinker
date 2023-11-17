@@ -2,6 +2,7 @@ package cn.gtcommunity.gregtinker.trait;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
@@ -15,26 +16,21 @@ public class TraitAlpha extends AbstractTrait
 {
     public TraitAlpha()
     {
-        super("alpha", 201204230);
+        super("alpha", 0xEE4B2B);
     }
 
     @Override
     public void onUpdate(ItemStack tool, World world, Entity entity, int itemSlot, boolean isSelected) {
         super.onUpdate(tool, world, entity, itemSlot, isSelected);
-        if (!(isSelected && entity.ticksExisted % 20 == 0 && entity instanceof EntityPlayer && !entity.isDead)) return;
+        if (!isSelected || !(entity.ticksExisted % 20 == 0)) return;
+
+        if (!(entity instanceof EntityPlayer) || entity.isDead) return;
 
         List<EntityLivingBase> entityLivings = world.getEntitiesWithinAABB(EntityLivingBase.class, new AxisAlignedBB(entity.posX, entity.posY, entity.posZ, entity.posX, entity.posY, entity.posZ).grow(10, 10, 10));
 
-        causeDamage((EntityLivingBase) entity);
-
         for (EntityLivingBase entityLiving : entityLivings)
         {
-            causeDamage(entityLiving);
+            attackEntitySecondary(DamageSource.MAGIC, 1, entityLiving, true, false);
         }
-    }
-
-    protected void causeDamage(EntityLivingBase target)
-    {
-        attackEntitySecondary(DamageSource.MAGIC, 1, target, true, false);
     }
 }

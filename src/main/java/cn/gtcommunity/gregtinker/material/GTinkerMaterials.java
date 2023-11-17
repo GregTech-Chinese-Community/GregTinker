@@ -184,7 +184,7 @@ public class GTinkerMaterials
                 .withStatsHead(50, 12F, 3F, HarvestLevels.IRON)
                 .withStatsHandle(1.1F, -25)
                 .withStatsExtra(250)
-                .withTraits(PartType.HEAD, GTinkerTraits.VENEER2)
+                .withTraits(PartType.HEAD, GTinkerTraits.INDUCED_LIGHTNING)
                 .withTraits(PartType.TOOL, GTinkerTraits.VENEER)
                 .build();
         BOROSILICATE_GLASS = new MaterialBuilder("borosilicate_glass", 0xB2BEB5, MaterialForm.METAL, "BorosilicateGlass")
@@ -275,7 +275,7 @@ public class GTinkerMaterials
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
                 .withTraits(PartType.MAIN, GTinkerTraits.ALPHA)
-                .withTraits(PartType.TOOL, TinkerTraits.duritos)
+                .withTraits(PartType.TOOL, GTinkerTraits.MALICIOUS_PERCEPTION)
                 .build();
         EPOXY = new MaterialBuilder("epoxy", 0xF4C430, MaterialForm.METAL, "Epoxy")
                 .requiresMods("gregtech")
@@ -426,7 +426,7 @@ public class GTinkerMaterials
                 .withStatsHead(1500, 7F, 8F, HarvestLevels.COBALT)
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
-                .withTraits(PartType.MAIN, GTinkerTraits.ALPHA)
+                .withTraits(PartType.MAIN, GTinkerTraits.EVENLY_MATCHED)
                 .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         TRINAQUADALLOY = new MaterialBuilder("trinaquadalloy", 0x483248, MaterialForm.METAL, "Trinaquadalloy")
@@ -446,7 +446,7 @@ public class GTinkerMaterials
                 .withStatsHead(1500, 7F, 8F, HarvestLevels.COBALT)
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
-                .withTraits(PartType.MAIN, GTinkerTraits.ALPHA)
+                .withTraits(PartType.MAIN, GTinkerTraits.RAPACITY)
                 .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         HASTELLOY_C276 = new MaterialBuilder("hastelloy_c276", 0xFA5F55, MaterialForm.METAL, "HastelloyC276")
@@ -456,7 +456,7 @@ public class GTinkerMaterials
                 .withStatsHead(1500, 7F, 8F, HarvestLevels.COBALT)
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
-                .withTraits(PartType.MAIN, GTinkerTraits.ALPHA)
+                .withTraits(PartType.MAIN, GTinkerTraits.RAPACITY)
                 .withTraits(PartType.TOOL, TinkerTraits.duritos)
                 .build();
         INCOLOY_MA_956 = new MaterialBuilder("incoloy_ma_956", 0x2AAA8A, MaterialForm.METAL, "IncoloyMa956")
@@ -497,7 +497,7 @@ public class GTinkerMaterials
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
                 .withTraits(PartType.MAIN, GTinkerTraits.ALPHA)
-                .withTraits(PartType.TOOL, TinkerTraits.duritos)
+                .withTraits(PartType.TOOL, GTinkerTraits.COUNTER_MEASURES)
                 .build();
         TITANIUM_TUNGSTEN_CARBIDE = new MaterialBuilder("titanium_tungsten_carbide", 0x770737, MaterialForm.METAL, "TitaniumTungstenCarbide")
                 .requiresMods("gcym")
@@ -517,7 +517,7 @@ public class GTinkerMaterials
                 .withStatsHandle(1.1F, 300)
                 .withStatsExtra(100)
                 .withTraits(PartType.MAIN, GTinkerTraits.ALPHA)
-                .withTraits(PartType.TOOL, TinkerTraits.duritos)
+                .withTraits(PartType.TOOL, GTinkerTraits.COUNTERATTACK)
                 .build();
         HSLA_STEEL = new MaterialBuilder("hsla_steel", 0x808080, MaterialForm.METAL, "HslaSteel")
                 .requiresMods("gcym")

@@ -15,14 +15,14 @@ public class TraitInertia extends AbstractTrait
     private final float chance = 0.45F;
     public TraitInertia()
     {
-        super("inertia", 540690790);
+        super("inertia", 0x7393B3);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Override
     public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical)
     {
-        if (chance > random.nextFloat()) damage *= 2;
+        if (chance > random.nextFloat()) newDamage *= 2;
 
         return super.damage(tool, player, target, damage, newDamage, isCritical);
     }

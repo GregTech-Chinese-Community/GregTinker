@@ -11,7 +11,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 import slimeknights.tconstruct.library.utils.ToolHelper;
@@ -23,7 +22,7 @@ public class TraitIrradiation extends AbstractTrait
 
     public TraitIrradiation()
     {
-        super("irradiation", 223255000);
+        super("irradiation", 0xFCF55F);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

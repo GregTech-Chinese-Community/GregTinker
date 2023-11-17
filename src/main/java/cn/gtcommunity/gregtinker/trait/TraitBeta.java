@@ -12,7 +12,7 @@ public class TraitBeta extends AbstractTrait
 {
     public TraitBeta()
     {
-        super("beta", 128128000);
+        super("beta", 0x0096FF);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

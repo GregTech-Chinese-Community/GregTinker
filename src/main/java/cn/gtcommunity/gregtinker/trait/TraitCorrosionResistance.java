@@ -13,7 +13,7 @@ public class TraitCorrosionResistance extends AbstractTrait
     private boolean update = false;
     public TraitCorrosionResistance()
     {
-        super("corrosion_resistance", 229228226);
+        super("corrosion_resistance", 0xE5E4E2);
     }
 
     @Override
