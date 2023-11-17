@@ -1,5 +1,6 @@
 package cn.gtcommunity.gregtinker.trait;
 
+import cn.gtcommunity.gregtinker.api.utils.GTiLog;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.entity.*;
 import net.minecraft.entity.player.EntityPlayer;
@@ -71,6 +72,7 @@ public class TraitExorcism extends AbstractTrait
             {
                 EntityLiving entity = (EntityLiving) event.getEntityLiving();
                 entity.setAttackTarget(null);
+                entity.getNavigator().tryMoveToXYZ(2 * entity.posX - player.posX, entity.posY, 2 * entity.posZ - player.posZ, 1);
                 return;
             }
         }
