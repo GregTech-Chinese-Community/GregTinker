@@ -1,13 +1,12 @@
 package cn.gtcommunity.gregtinker;
 
-import cn.gtcommunity.gregtinker.api.utils.GTiLog;
 import cn.gtcommunity.gregtinker.common.CommonProxy;
-import cn.gtcommunity.gregtinker.material.GTinkerMaterials;
 import cn.gtcommunity.gregtinker.material.MaterialDefinition;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(
@@ -39,14 +38,18 @@ public class GregTinker
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        GTiLog.init(event.getModLog());
-        GTinkerMaterials.init();
-        proxy.preLoad();
+        proxy.onPreInit(event);
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        MaterialDefinition.initMaterialProperties();
+        proxy.onInit(event);
+    }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+        proxy.onPostInit(event);
     }
 
     @Mod.EventHandler

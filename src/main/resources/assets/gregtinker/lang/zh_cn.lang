@@ -106,3 +106,7 @@ modifier.irradiation.desc=§o小心辐射！§r\n击中目标时有概率使其�
 
 modifier.inertia.name=惰性
 modifier.inertia.desc=§o并不像看上去那样可控。§r\n你的工具有概率造成两倍伤害，但攻击速度略微减少。
+
+
+
+modifier.gregtinker.electric.name=电力装载

@@ -1,6 +1,11 @@
 package cn.gtcommunity.gregtinker.trait;
 
+import gregtech.common.items.MetaItems;
+import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class GTinkerTraits
 {
@@ -27,6 +32,18 @@ public class GTinkerTraits
     public static final AbstractTrait INERTIA = new TraitInertia();
     public static final AbstractTrait IRRADIATION = new TraitIrradiation();
 
+    public static final ModifierGTElectric MODIFIER_GT_ELECTRIC = new ModifierGTElectric();
+
+    public static final List<Modifier> MODIFIERS = Arrays.asList(
+            MODIFIER_GT_ELECTRIC
+            );
+
     public GTinkerTraits()
     {/**/}
+
+    public static void initModifierMaterials()
+    {
+        MODIFIER_GT_ELECTRIC.addItem(MetaItems.LAPOTRON_CRYSTAL.getStackForm(), 1, 1);
+    }
+
 }
